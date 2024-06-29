@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Contacts List">
+        <template if:true={contacts.data}>
+            <lightning-datatable key-field="id" data={contacts.data} columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template if:true={contacts.error}>
+            <p>Error: {contacts.error}</p>
+        </template>
+    </lightning-card>
+</template>

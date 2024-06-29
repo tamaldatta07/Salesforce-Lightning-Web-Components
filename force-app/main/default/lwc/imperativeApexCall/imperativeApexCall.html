@@ -1,0 +1,13 @@
+<!-- contactListImperative.html -->
+<template>
+    <lightning-card title="Contacts List for apex imperative call">
+        <lightning-button label="Fetch Contacts" onclick={handleButtonClick}></lightning-button>
+        <template if:true={contacts}>
+            <lightning-datatable key-field="id" data={contacts} columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <p>Error: {error.body.message}</p>
+        </template>
+    </lightning-card>
+</template>
