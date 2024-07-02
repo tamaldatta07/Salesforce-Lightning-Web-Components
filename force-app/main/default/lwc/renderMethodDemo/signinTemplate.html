@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Render lifeCycle hook demo" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            <h2 class="slds-text-heading_medium slds-var-m-bottom_medium">Sign In Form</h2>
+            <lightning-input type="email" label="Email"></lightning-input>
+            <lightning-input type="password" label="Password"></lightning-input>
+            <lightning-button variant="destructive" label="Back" title="Back" onclick={handleClick}
+                class="slds-m-left_x-small">
+            </lightning-button>
+            <lightning-button variant="success" label="SignIn" title="SignIn" onclick={submitHandler}
+                class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
