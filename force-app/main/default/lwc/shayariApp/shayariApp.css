@@ -1,0 +1,76 @@
+/* Keyframes for a fade-in and scale animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Grid container styling for 6 items per row */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+.grid-container.single {
+    display: inline-grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Shayari card using flex layout, with initial animation */
+.shayari-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+    gap: 5px;
+    /* Apply the fade and scale animation on load */
+    animation: fadeInScale 0.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to add a slight scale and shadow */
+.shayari-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shayari-content {
+    flex: 1;
+}
+
+.shayari-text {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+/* Minimal styling for action icons */
+.delete-icon,
+.share-icon {
+    cursor: pointer;
+}
+
+/* Search and refresh container */
+.search-refresh-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.refresh-icon {
+    cursor: pointer;
+}
+
+/* Optional: Limit modal width */
+.slds-modal__container {
+    max-width: 500px;
+}
